@@ -1,0 +1,120 @@
+/* ================= ROOT VARIABLES ================= */
+:root{
+    --primary: #2563EB;
+    --primary-light: #3B82F6;
+    --dark: #1E3A8A;
+    --panel: #FFFFFF;
+    --bg1: #F4F7FB;
+    --bg2: #DCE8F8;
+}
+
+/* ================= RESET ================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= BODY ================= */
+body{
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    min-height: 100vh;
+    color: #1F2937;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar{
+    height: 60px;
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.25);
+}
+
+.logo{
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ================= NAVBAR ================= */
+.navbar a{
+    color: #EFF6FF;
+    text-decoration: none;
+    margin-left: 14px;
+    padding: 8px 18px;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.navbar a:hover{
+    background: rgba(255,255,255,0.25);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* ================= MAIN CONTAINER ================= */
+.container{
+    padding: 40px;
+}
+
+/* ================= TITLE ================= */
+h2{
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* ================= TABLE ================= */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(30,58,138,0.18);
+}
+
+/* ================= TABLE HEADER ================= */
+th{
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 14px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* ================= TABLE DATA ================= */
+td{
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+/* ================= ROW HOVER (FAST) ================= */
+tr{
+    transition: transform 0.15s ease;
+    will-change: transform;
+}
+
+tr:nth-child(even){
+    background: #F8FAFC;
+}
+
+tr:hover{
+    transform: scale(1.01);
+    background: #EFF6FF;
+}
+
+/* ================= SCROLL FIX (IF MANY ROWS) ================= */
+table tr:last-child td{
+    border-bottom: none;
+}

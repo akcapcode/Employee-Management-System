@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About | Sky EMS</title>
+
+<style>
+/* ================= GLOBAL ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#F4F7FB,#DCE8F8);
+    color:#1F2937;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar{
+    height:60px;
+    background:linear-gradient(90deg,#3B82F6,#2563EB);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    box-shadow:0 4px 14px rgba(37,99,235,0.25);
+}
+
+.logo{
+    color:#FFFFFF;
+    font-size:22px;
+    font-weight:700;
+}
+
+.navbar a{
+    color:#EFF6FF;
+    text-decoration:none;
+    margin-left:14px;
+    padding:8px 18px;
+    border-radius:22px;
+    font-size:14px;
+    font-weight:600;
+    transition:0.25s;
+}
+
+.navbar a:hover{
+    background:rgba(255,255,255,0.25);
+    color:#FFFFFF;
+}
+
+/* ================= CONTAINER ================= */
+.about-container{
+    max-width:1200px;
+    margin:60px auto;
+    background:#FFFFFF;
+    padding:60px 70px;
+    border-radius:30px;
+    box-shadow:0 20px 45px rgba(30,58,138,0.18);
+}
+
+/* HEADINGS */
+.about-container h1{
+    text-align:center;
+    font-size:36px;
+    font-weight:800;
+    margin-bottom:25px;
+    color:#1E3A8A;
+}
+
+.about-container h2{
+    margin-top:45px;
+    font-size:26px;
+    color:#1E3A8A;
+}
+
+.about-container p{
+    font-size:17px;
+    line-height:1.9;
+    margin-top:18px;
+    color:#475569;
+}
+
+/* ================= CARDS ================= */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+/* CARD BASE */
+.card{
+    position:relative;
+    background:#F1F5F9;
+    padding:32px;
+    border-radius:24px;
+    overflow:hidden;
+    border:1px solid #E2E8F0;
+    box-shadow:0 8px 20px rgba(30,58,138,0.10);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* LEFT → RIGHT COLOR OVERLAY (SINGLE COLOR) */
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:#2563EB;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.35s ease;
+    z-index:0;
+}
+
+/* KEEP TEXT ABOVE */
+.card *{
+    position:relative;
+    z-index:1;
+}
+
+/* CARD TEXT */
+.card h3{
+    font-size:20px;
+    margin-bottom:14px;
+    color:#1E3A8A;
+    transition:color 0.25s ease;
+}
+
+.card p{
+    font-size:15px;
+    line-height:1.7;
+    color:#475569;
+    transition:color 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 18px 35px rgba(30,58,138,0.25),
+        0 0 25px rgba(37,99,235,0.35);
+}
+
+.card:hover::after{
+    transform:scaleX(1);
+}
+
+.card:hover h3,
+.card:hover p{
+    color:#FFFFFF;
+}
+
+/* ================= LIST ================= */
+.about-container ul{
+    margin-top:18px;
+    margin-left:30px;
+}
+
+.about-container ul li{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#334155;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    margin-top:60px;
+    text-align:center;
+    font-size:16px;
+    font-weight:600;
+    color:#64748B;
+}
+
+.footer b{
+    color:#2563EB;
+    font-weight:800;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    <div class="logo">Sky EMS</div>
+    <div class="navbar">
+        <a href="register.html">Registration</a>
+        <a href="viewemp">View Emp</a>
+        <a href="about.html">About</a>
+        <a href="index.html">Login</a>
+    </div>
+</div>
+
+<div class="about-container">
+
+    <h1>About Employee Management System</h1>
+
+    <p>
+        The <b>Employee Management System (EMS)</b> is a modern web-based application
+        designed to manage employee records efficiently and securely. It provides a
+        centralized platform for storing, updating, and viewing employee information
+        such as personal details, designation, salary, and address.
+    </p>
+
+    <p>
+        This system minimizes manual paperwork, improves data accuracy, and enhances
+        organizational productivity by automating employee record management using
+        reliable backend technologies.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Secure Data</h3>
+            <p>
+                Employee information is stored securely using MySQL Database,
+                ensuring data integrity and protection.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>User Friendly</h3>
+            <p>
+                Clean, intuitive interface that allows easy navigation and smooth
+                interaction for users.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fast Access</h3>
+            <p>
+                Quick employee registration and instant access to records with
+                optimized backend processing.
+            </p>
+        </div>
+    </div>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Employee Registration and Management</li>
+        <li>View Employee Details in Tabular Format</li>
+        <li>Automatic Employee ID Generation</li>
+        <li>Secure Database Connectivity</li>
+        <li>Professional and Responsive UI</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>HTML, CSS & JAVA SCRIPT</li>
+        <li>Java Servlets</li>
+        <li>JDBC</li>
+        <li>MySQL Database</li>
+        <li>Apache Tomcat Server</li>
+    </ul>
+
+    <h2>Project Objective</h2>
+    <p>
+        The primary objective of this project is to provide a scalable and efficient
+        employee management solution that simplifies data handling while maintaining
+        security, accuracy, and ease of use.
+    </p>
+
+    <div class="footer">
+        Developed by <b>Akash Swain</b> | Employee Management System
+    </div>
+
+</div>
+
+</body>
+</html>
